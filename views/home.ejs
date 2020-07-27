@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<head>
+    <title>
+        <%=locals.title %>
+    </title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css"
+        integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+
+<body>
+    <h1 id="page-heading">
+        <i class="fas fa-address-book"></i>
+        My Contacts List</h1>
+    <div id="contacts-list-container">
+        <ul>
+            <% for(let i of contact_list) { %>
+            <li class="contact">
+                <div class="details">
+                    <p class="oneLine">
+                        <%= i.name %>
+                    </p>
+                    <p class="oneLine">
+                        <%= i.phone %>
+                    </p>
+                </div>
+                <div class="delete-button">
+                    <a href="/delete-contact/?id=<%= i._id %>">
+                        <!-- & name=<%= i.name %> -->
+                        <i class="fas fa-window-close"></i>
+                    </a>
+
+                </div>
+            </li>
+            <% } %>
+        </ul>
+    </div>
+    <form action="/create-contact" method="POST">
+        <!-- <input type="text" name="country_code" title="Error Message" pattern="[1-9]{1}[0-9]{9}"> -->
+        <input type="text" name="name" placeholder="Enter Name" maxlength="25" required>
+
+        <input name="phone"
+            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+            type="number" maxlength="10" placeholder="Enter Phone" required />
+        <!-- <input size="10" maxlength="10" name="phone"  pattern="[1-9]{1}[0-9]{9}" placeholder="Enter Phone"  required> -->
+        <button class="myButton" type="submit">Add</button>
+    </form>
+    <!-- <h1>Rendered! This page successful......</h1> -->
+    <script type="text/javascript" src="/js/home.js"> </script>
+</body>
+
+</html>

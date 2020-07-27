@@ -1,0 +1,89 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+    text-align: center;
+    
+}
+#page-heading{
+    text-align: center;
+    margin-top: 25px;
+    color: grey;
+}
+p{
+    align-items: center;
+}
+.oneLine{
+    display: inline;
+
+}
+.center{
+    align-items: center;
+}
+li{
+    list-style-type: none;
+}
+.delete-button, .details{
+    display: inline-block;
+}
+
+#contacts-list-container ul{
+    padding: 0;
+    list-style: none;
+}
+.contact{
+    padding: 3px 10px;
+    border: 1px solid white;
+    background-color: #6f92f9;
+    box-shadow: 1px 1px 1px 1px lightgray;
+    color: white;
+    display: flex;
+}
+.contact .details{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 90%;
+    text-align: center;
+}
+.contact{
+    display: inline-block;
+}
+.contact .delete-button{
+    width: 10%;
+    padding: 3px;
+    text-align: center;
+    margin-top: 5px;
+}
+.contact .delete-button a{
+    color: white;
+    background-color: red;
+}
+input {
+  border: none;
+  border-bottom: 2px solid #3d8290;
+}
+
+.myButton {
+	box-shadow: 3px 4px 0px 0px #3dc21b;
+	background:linear-gradient(to bottom, #44c767 5%, #5cbf2a 100%);
+	background-color:#44c767;
+	border-radius:18px;
+	border:1px solid #18ab29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:7px 25px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #50cf3c;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #6f92f9 5%, #6f92f9 100%);
+	background-color:#6f92f9;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
